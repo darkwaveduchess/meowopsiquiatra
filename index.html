@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Meow,Psiquiatra</title>
+    <link rel="icon" type="png" href="Gato-PNG.png">
+
+    <style>
+        h1 {
+            color: blueviolet;
+            background-color: rgb(255, 133, 237);
+            border: 5px dashed powderblue;
+
+            font-family: courier;
+            font-size: 200%;
+            display: inline-block;
+        }
+
+        p {
+            color: whitesmoke;
+            background-color: black;
+            font-family: courier;
+            font-size: 90%;
+            display: inline-block;
+
+        }
+
+        img {
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin-left: 30px;
+
+        }
+
+        div {
+            float: left;
+        }
+        button {
+            color: red;
+            background-color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 100%;
+        }
+
+        #btn-sim { 
+            background-color: rgb(187, 188, 186);
+            cursor: url('cursor.png'), auto;
+        }
+
+        #btn-nao { 
+            background-color: rgb(187, 188, 186);
+            cursor: url('chorando2,png.png'), auto;
+        }
+
+        button:active {
+            background-color: rgba(228, 47, 156, 0.08);
+        }
+
+        html {
+            background-color:rgb(243, 222, 236);
+            cursor: url(oie.png),auto;
+        }       
+            
+    </style>
+</head>
+
+<body>
+
+    <div>
+
+        <h1><strong>Meow, O Psiquiatra</strong></h1>
+        <br>
+        <p>Bem-vinde, sou o Meow, psiquiatra.</p>
+        <br>
+        <p><i>Aceitas um Vain Vanse?</i></p>
+        <br>
+
+        <button id="btn-sim" onclick="changebg('venvanse.gif')">sim, aceito</button>
+
+        <button id="btn-nao" onclick="changebg('angry.gif')">nao, obrigado sou chato</button>
+
+    </div>
+
+    <img title="gato fofo te dando remedio" src="gatinho.png" alt="gatinho fofo">
+
+
+    <script>
+        function changebg(img){
+            document.getElementsByTagName("html")[0].style.background = "url('"+img+"')";
+        }
+    </script>
+
+</body>
+
+</html>
