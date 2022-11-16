@@ -5,23 +5,22 @@
 
     <title>Meow,Psiquiatra</title>
     <link rel="icon" type="png" href="Gato-PNG.png">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <style>
         h1 {
-            color: blueviolet;
-            background-color: rgb(255, 133, 237);
+            color: black;
+            background-color: white;
             border: 5px dashed powderblue;
-
-            font-family: courier;
-            font-size: 200%;
+            font-size: 300%;
             display: inline-block;
         }
 
         p {
             color: whitesmoke;
             background-color: black;
-            font-family: courier;
-            font-size: 90%;
+            font-size: 150%;
             display: inline-block;
 
         }
@@ -37,6 +36,7 @@
         div {
             float: left;
         }
+
         button {
             color: red;
             background-color: white;
@@ -44,12 +44,12 @@
             font-size: 100%;
         }
 
-        #btn-sim { 
+        #btn-sim {
             background-color: rgb(187, 188, 186);
             cursor: url('cursor.png'), auto;
         }
 
-        #btn-nao { 
+        #btn-nao {
             background-color: rgb(187, 188, 186);
             cursor: url('chorando2,png.png'), auto;
         }
@@ -59,10 +59,15 @@
         }
 
         html {
-            background-color:rgb(243, 222, 236);
-            cursor: url(oie.png),auto;
-        }       
-            
+            font-family: 'Dancing Script', cursive;
+            background-image: url(beck.jpg);
+            cursor: url(oie.png), auto;
+            background-size: 500px;
+        }
+
+        audio {
+            display: none;
+        }
     </style>
 </head>
 
@@ -70,11 +75,16 @@
 
     <div>
 
-        <h1><strong>Meow, O Psiquiatra</strong></h1>
+        
+
+        <h1><strong>Doutor Meow</strong></h1>
         <br>
-        <p>Bem-vinde, sou o Meow, psiquiatra.</p>
+        <br>
+        <p>Olá, sou o Meow, <em>psiquiatra.</em></p>
+        <br>
         <br>
         <p><i>Aceitas um Vain Vanse?</i></p>
+        <br>
         <br>
 
         <button id="btn-sim" onclick="changebg('venvanse.gif')">sim, aceito</button>
@@ -85,10 +95,26 @@
 
     <img title="gato fofo te dando remedio" src="gatinho.png" alt="gatinho fofo">
 
+    <audio id='god' controls>
+        <source src="god.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id='shoot' controls>
+        <source src="shoot.mp3" type="audio/mp3">
+    </audio>
+
 
     <script>
-        function changebg(img){
-            document.getElementsByTagName("html")[0].style.background = "url('"+img+"')";
+        function changebg(img) {
+            document.getElementsByTagName("html")[0].style.background = "url('" + img + "')";
+            if (img == 'angry.gif') {
+                god.pause();
+                shoot.play();
+            }
+            else {
+                shoot.pause();
+                god.play();
+            }
         }
     </script>
 
